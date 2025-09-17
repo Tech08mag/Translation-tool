@@ -30,5 +30,10 @@ Setup:
 
 
 Credits:
-Idea: octronix
 
+Idea: octronix\
+
+
+Libarys & Software:
+- tesseract [https://github.com/tesseract-ocr/tesseract]
+- 
