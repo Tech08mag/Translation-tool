@@ -1,20 +1,13 @@
-import pyautogui
-from pynput import keyboard
-from translations import translate
-import customtkinter
-
-customtkinter.set_appearance_mode("System")
-customtkinter.set_default_color_theme("blue")
-app = customtkinter.CTk()
-app.geometry("400x240")
-
-def on_key_press(key):
-  if hasattr(key, "char") and key.char == "^":
-    pyautogui.screenshot('image.png')
-    translate("image.png", 2, "eng", "english", "german")
+from helpers.img import capture
+from ocr.img_rec import get_text_from_image
+from translation.translation import translate
 
 
+def main():
+    capture(1)
+    text: str = get_text_from_image("screenshot.png")
+    print(translate(text, "en", "de"))
 
-keyboard_listener = keyboard.Listener(on_press=on_key_press)
-keyboard_listener.start()
-app.mainloop()
+
+if __name__ == "__main__":
+    main()
