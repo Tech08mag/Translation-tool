@@ -26,6 +26,7 @@
 
 ## Features
 - [x] Google Translate Integration
+- [x] Mymemory Translator
 
 
 ## Setup:

@@ -1,5 +1,8 @@
 {
   "monitor_number": 1,
-  "screenshot_name": "screenshot.png"
+  "screenshot_name": "screenshot.png",
+  "content_lang": "eng",
 
+  "source_lang_google": "",
+  "target_lang_google": "german"
 }
