@@ -1,6 +1,7 @@
 # Translation Tool
 
 ## Content:
+- [Requirements](#requirements) 
 - [To Do](#to-do)
 - [Features](#features)
 - [Setup](#setup):
@@ -8,6 +9,10 @@
     - [Windows](#windows)
 - [Ressources](#ressources)
 - [Credits](#credits)
+
+
+## Requirements:
+- https://github.com/tesseract-ocr/tesseract
 
 ## To Do
 - [ ] GUI
@@ -25,6 +30,12 @@
 
 ## Setup:
 ### Linux:
+1. Install tesseract-ocr
+```sh
+sudo apt install tesseract-ocr
+```
+
+2. Run the Program
 ```sh
 uv run main.py
 ```
@@ -38,6 +49,8 @@ Idea: octronix\
 Supported by the ["Speichern Vergessen Community"](https://discord.gg/mnzyJECkdS)
 
 Libarys & Software:
+- GUI:
+    - [NiceGUI](https://nicegui.io/)
 - OCR:   
     - [tesseract](https://github.com/tesseract-ocr/tesseract)
 

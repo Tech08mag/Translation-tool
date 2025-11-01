@@ -1,7 +1,12 @@
+from helpers.json_actions import read_json
+
+
 import pytesseract as tess
 from PIL import Image
 
-def get_text_from_image(img_path: str):
+
+def get_text_from_image_tess():
+    img_path = read_json("settings.json", "screenshot_name")
     img = Image.open(img_path)
     text = tess.image_to_string(img)
     return text

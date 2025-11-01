@@ -1,11 +1,11 @@
 from helpers.img import capture
-from ocr.img_rec import get_text_from_image
+from ocr.img_rec import get_text_from_image_tess
 from translation.translation import translate
 
 
 def main():
-    capture(1)
-    text: str = get_text_from_image("screenshot.png")
+    capture()
+    text: str = get_text_from_image_tess()
     print(translate(text, "en", "de"))
 
 

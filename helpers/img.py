@@ -1,9 +1,13 @@
+from helpers.json_actions import read_json
+
 from mss import mss
 import mss.tools
 
 
-def capture(monitor_number: int):
+def capture():
+    
     with mss.mss() as sct:
+        monitor_number = read_json("settings.json", "monitor_number")
         monitor = sct.monitors[monitor_number]
         im = sct.grab(monitor)
         mss.tools.to_png(im.rgb, im.size, output="screenshot.png")

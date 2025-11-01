@@ -7,5 +7,6 @@ requires-python = ">=3.11"
 dependencies = [
     "deep-translator>=1.11.4",
     "mss>=10.1.0",
+    "nicegui>=3.2.0",
     "pytesseract>=0.3.13",
 ]
