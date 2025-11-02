@@ -4,5 +4,9 @@
   "content_lang": "eng",
 
   "source_lang_google": "",
-  "target_lang_google": "german"
+  "target_lang_google": "german",
+
+  "deepl_api_token": "",
+  "use_free_api": true
+
 }

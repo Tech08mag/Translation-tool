@@ -4,6 +4,7 @@
 - [Requirements](#requirements) 
 - [To Do](#to-do)
 - [Features](#features)
+    - [Translators](#translators)
 - [Setup](#setup):
     - [Linux](#linux)
     - [Windows](#windows)
@@ -13,6 +14,9 @@
 
 ## Requirements:
 - https://github.com/tesseract-ocr/tesseract
+- https://github.com/PaddlePaddle/PaddleOCR?tab=readme-ov-file
+- [Installation Guide](https://www.paddlepaddle.org.cn/en/install/quick?docurl=undefined)
+
 
 ## To Do
 - [ ] GUI
@@ -25,8 +29,10 @@
 
 
 ## Features
-- [x] Google Translate Integration
-- [x] Mymemory Translator
+### Translators:
+- [x] Google Translate integration
+- [x] Mymemory Translator (One Request has a character Limit of 500)
+- [x] (Not tested!) DeepL Translator integration (require [Api Token](https://developers.deepl.com/docs/getting-started/intro))
 
 
 ## Setup:
@@ -46,7 +52,7 @@ uv run main.py
 ## Ressources:
 - 
 ## Credits:
-Idea: octronix\
+Idea & test data: octronix\
 Supported by the ["Speichern Vergessen Community"](https://discord.gg/mnzyJECkdS)
 
 Libarys & Software:
