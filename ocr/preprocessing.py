@@ -1,3 +1,6 @@
+from helpers.json_actions import read_json
+
+
 import cv2
 import numpy as np
 
@@ -106,3 +109,15 @@ def rotateImage(cvImage, angle: float):
 def deskew(cvImage):
     angle = getSkewAngle(cvImage)
     return rotateImage(cvImage, -1.0 * angle)
+
+
+def preprocessing_handler(Img: str):
+    preprocession: bool = read_json("settings.json", "preprocession")
+    if preprocession:
+        cv_img = open(Img)
+        grayscale_val: bool = read_json("settings.json", "grayscale")
+        if grayscale_val && :
+            Img = grayscale(cv_img)
+
+
+

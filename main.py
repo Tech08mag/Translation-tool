@@ -6,7 +6,7 @@ from translation.translation import translateGoogle, translateMymemory, translat
 def main():
     capture()
     text: str = get_text_from_image_tess()
-
+    
     print(translateMymemory(text))
 
     print(translateGoogle(text))
