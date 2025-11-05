@@ -112,12 +112,20 @@ def deskew(cvImage):
 
 
 def preprocessing_handler(Img: str):
-    preprocession: bool = read_json("settings.json", "preprocession")
-    if preprocession:
-        cv_img = open(Img)
-        grayscale_val: bool = read_json("settings.json", "grayscale")
-        if grayscale_val && :
-            Img = grayscale(cv_img)
+    preprocesses = {
+        "grayscale": read_json("settings.json", "grayscale"),
+        "binarize": read_json("settings.json", "binarize"),
+        "brightness": read_json("settings.json", "brightness"),
+        "brightness_value": read_json("settings.json", "brightness_value"),
+        "contrast": read_json("settings.json", "contrast"),
+        "contrast_value": read_json("settings.json", "contrast_value"),
+        "invert": read_json("settings.json", "invert"),
+        "thin_lines": read_json("settings.json", "thin_lines"),
+        "denoise": read_json("settings.json", "denoise"),
+        "crop": read_json("settings.json", "crop")
+}
+    preprocession: str = read_json("settings.json", "preprocession")
+    if preprocession != "":
 
 
-
+    grayscale_val: bool = read_json("settings.json", "grayscale")
