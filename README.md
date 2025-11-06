@@ -8,6 +8,7 @@
 - [Setup](#setup):
     - [Linux](#linux)
     - [Windows](#windows)
+    - [Options and Tuneing](#options-and-tuneing)
 -[Testing](#testing)
 - [Ressources](#ressources)
 - [Credits](#credits)
@@ -58,6 +59,10 @@ chmod +x test.sh
 ```sh
 ./test.sh
 ```
+## Options and Tuneing
+
+
+
 
 ## Ressources:
 - 
