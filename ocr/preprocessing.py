@@ -111,21 +111,57 @@ def deskew(cvImage):
     return rotateImage(cvImage, -1.0 * angle)
 
 
-def preprocessing_handler(Img: str):
-    preprocesses = {
-        "grayscale": read_json("settings.json", "grayscale"),
-        "binarize": read_json("settings.json", "binarize"),
-        "brightness": read_json("settings.json", "brightness"),
-        "brightness_value": read_json("settings.json", "brightness_value"),
-        "contrast": read_json("settings.json", "contrast"),
-        "contrast_value": read_json("settings.json", "contrast_value"),
-        "invert": read_json("settings.json", "invert"),
-        "thin_lines": read_json("settings.json", "thin_lines"),
-        "denoise": read_json("settings.json", "denoise"),
-        "crop": read_json("settings.json", "crop")
-}
+def preprocessing_handler(img: str):
+    preprocesses: list = []
+    preprocesses.append(read_json("settings.json", "grayscale"))
+    preprocesses.append(read_json("settings.json", "binarize"))
+    preprocesses.append(read_json("settings.json", "brightness"))
+    preprocesses.append(read_json("settings.json", "contrast"))
+    preprocesses.append(read_json("settings.json", "invert"))
+    preprocesses.append(read_json("settings.json", "thin_lines"))
+    preprocesses.append(read_json("settings.json", "thicken_lines"))
+    preprocesses.append(read_json("settings.json", "denoise"))
+    preprocesses.append(read_json("settings.json", "crop"))
+    preprocesses.append(read_json("settings.json", "border"))
+
+    print(preprocesses)
+
     preprocession: str = read_json("settings.json", "preprocession")
     if preprocession != "":
-
-
-    grayscale_val: bool = read_json("settings.json", "grayscale")
+        for r in preprocesses:
+            imgCV = open(img)
+            match r:
+                case "grayscale":
+                    imgCV = grayscale(imgCV)
+                    save(imgCV, "screenshot.png")
+                case "brightness":
+                    brightness_value = read_json("settings.json", "brightness_value")
+                    imgCV = brightness(imgCV, brightness_value)
+                    save(imgCV, "screenshot.png")
+                case "binarize":
+                    imgCV = binarize(imgCV)
+                    save(imgCV, "screenshot.png")
+                case "contrast":
+                    contrast_value = read_json("settings.json", "contrast_value")
+                    imgCV = contrast(imgCV, contrast_value)
+                    save(imgCV, "screenshot.png")
+                case "invert":
+                    imgCV = invert(imgCV)
+                    save(imgCV, "screenshot.png")
+                case "thin_lines":
+                    imgCV = thin_lines(imgCV)
+                    save(imgCV, "screenshot.png")
+                case "thicken_lines":
+                    imgCV = thicken_lines(imgCV)
+                    save(imgCV, "screenshot.png")
+                case "denoise":
+                    imgCV = denoise(imgCV)
+                    save(imgCV, "screenshot.png")
+                case "crop":
+                    crop_value = read_json("settings.json", "crop_value")
+                    imgCV = crop(imgCV, crop_value)
+                    save(imgCV, "screenshot.png")
+                case "border":
+                    border_size = read_json("settings.json", "border_size")
+                    imgCV = add_border(imgCV, border_size)
+                    imgCV = open(img)

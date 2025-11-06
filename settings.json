@@ -6,14 +6,15 @@
   "preprocession": "preprocession",
   "grayscale": "grayscale",
   "binarize": "",
-  "brightness": "brightness",
-  "brightness_value": 100,
-  "contrast": "contrast",
+  "brightness": "",
+  "brightness_value": 0,
+  "contrast": "",
   "contrast_value": 0,
-  "invert": "invert",
-  "thin_lines": "",
-  "denoise": "denoise",
-  "crop": "crop",
+  "invert": "",
+  "thin_lines": "thin_lines",
+  "thicken_lines": "",
+  "denoise": "denosie",
+  "crop": "",
   "crop_value": 0,
   "border": "",
   "border_size": 0,
@@ -25,8 +26,7 @@
   "source_lang_google": "",
   "target_lang_google": "german",
 
-  
+
   "deepl_api_token": "",
   "use_free_api": true
-
 }

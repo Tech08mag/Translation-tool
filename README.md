@@ -8,6 +8,7 @@
 - [Setup](#setup):
     - [Linux](#linux)
     - [Windows](#windows)
+-[Testing](#testing)
 - [Ressources](#ressources)
 - [Credits](#credits)
 
@@ -48,6 +49,15 @@ uv run main.py
 ```
 
 ### Windows:
+
+## testing
+```sh
+chmod +x test.sh
+```
+
+```sh
+./test.sh
+```
 
 ## Ressources:
 - 

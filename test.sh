@@ -1,0 +1,1 @@
+cp -r data/test.png /home/tech08mag/Code/Python/Translation-tool/ && mv test.png screenshot.png
