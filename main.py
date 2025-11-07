@@ -1,8 +1,8 @@
 from helpers.img import capture
 from ocr.preprocessing import preprocessing_handler
-
-from ocr.img_rec import get_text_from_image_tess
 from translation.translation import translateGoogle, PonsTranslator
+from ocr.img_rec import get_text_from_image_tess
+
 
 
 def main():

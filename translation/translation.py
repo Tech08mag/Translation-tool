@@ -1,6 +1,6 @@
 from helpers.json_actions import read_json
 
-from deep_translator import GoogleTranslator, MyMemoryTranslator, DeeplTranslator, PonsTranslator
+from deep_translator import GoogleTranslator, MyMemoryTranslator, DeeplTranslator, YandexTranslator
 
 
 def translateGoogle(msg: str):
@@ -28,10 +28,8 @@ def translateDeepL(msg: str):
     return DeeplTranslator(api_key=api_token, source=source_lang, target=target_lang, use_free_api=use_free_api).translate(msg)
 
 
-def translatePons(msg: str):
-    source_lang: str = read_json("settings.json", "source_lang_pons")
-    if source_lang == "":
-        source_lang = "auto"
-    target_lang: str = read_json("settings.json", "target_lang_pons")
-    translator = PonsTranslator(source=source_lang, target=target_lang)
-    return translator.translate_words(msg)
+def translateYandex(msg: str):
+    api_token: str = read_json("settings.json", "yandex_api_token")
+    source_lang: str = read_json("settings.json", "source_lang_google")
+    target_lang: str = read_json("settings.json", "target_lang_google")
+    return YandexTranslator(api_token).translate(msg, source=source_lang, target=target_lang)

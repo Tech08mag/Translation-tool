@@ -35,7 +35,7 @@
 - [x] Google Translate integration
 - [x] Mymemory Translator (One Request has a character Limit of 500)
 - [x] (Not tested!) DeepL Translator integration (require [Api Token](https://developers.deepl.com/docs/getting-started/intro))
-- [X] (No working properly!) Pons Translator
+- [X] (Not tested!) Yandex Translator integration (require [Api Token](https://yandex.cloud/en/docs/translate/operations/sa-api-key))
 - [x] Image preprocessing for better accurency
 
 ## Setup:
