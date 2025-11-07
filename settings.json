@@ -28,5 +28,9 @@
 
 
   "deepl_api_token": "",
-  "use_free_api": true
+  "use_free_api": true,
+
+  "source_lang_pons": "english",
+  "target_lang_pons": "german"
+
 }
