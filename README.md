@@ -16,12 +16,9 @@
 
 ## Requirements:
 - https://github.com/tesseract-ocr/tesseract
-- https://github.com/PaddlePaddle/PaddleOCR?tab=readme-ov-file
-- [Installation Guide](https://www.paddlepaddle.org.cn/en/install/quick?docurl=undefined)
 
 
 ## To Do
-- [ ] GUI
 - [ ] Installation/Setup Script Windows
 - [ ] German Readme
 - [ ] write a setup guide
@@ -36,6 +33,12 @@
 - [x] Mymemory Translator (One Request has a character Limit of 500)
 - [x] (Not tested!) DeepL Translator integration (require [Api Token](https://developers.deepl.com/docs/getting-started/intro))
 - [X] (Not tested!) Yandex Translator integration (require [Api Token](https://yandex.cloud/en/docs/translate/operations/sa-api-key))
+
+## Key Binds
+- [X] Control + Shift + Escape to quit
+- [X] Control + t to start translating
+- [X] F5 to test the image quality after preprocessing
+
 - [x] Image preprocessing for better accurency
 
 ## Setup:
@@ -47,7 +50,7 @@ sudo apt install tesseract-ocr
 
 2. Run the Program
 ```sh
-uv run main.py
+uv run gui.py
 ```
 
 ### Windows:
@@ -60,20 +63,14 @@ chmod +x test.sh
 ```sh
 ./test.sh
 ```
-## Options and Tuneing
 
-
-
-
-## Ressources:
-- 
 ## Credits:
 Idea & test data: octronix\
 Supported by the ["Speichern Vergessen Community"](https://discord.gg/mnzyJECkdS)
 
 Libarys & Software:
 - GUI:
-    - [NiceGUI](https://nicegui.io/)
+    - [Tkinter](https://docs.python.org/3/library/tkinter.html)
 - OCR:   
     - [tesseract](https://github.com/tesseract-ocr/tesseract)
 

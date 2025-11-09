@@ -28,6 +28,9 @@ class TranslationToolGUI:
         self.window.title("Translation Tool")
         self.window.geometry("400x500")
         self.window.iconphoto(False, tk.PhotoImage(file="data/speichern_vergessen.png"))
+        self.window.bind("<Control-Shift-Escape>", lambda e: self.window.quit())
+        self.window.bind("<Control-t>", lambda e: self._start())
+        self.window.bind("<F5>", lambda e: self._test())
 
     def _create_settings_frame(self):
         self.settings_frame = tk.Frame(self.window, padx=10, pady=10, background="blue")
