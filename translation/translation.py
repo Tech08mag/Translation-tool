@@ -1,4 +1,4 @@
-from helpers.json_actions import read_json
+from helper.json_actions import read_json
 
 from deep_translator import GoogleTranslator, MyMemoryTranslator, DeeplTranslator, YandexTranslator
 

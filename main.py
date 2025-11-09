@@ -1,17 +1,14 @@
-from helpers.img import capture
+from helper.img import capture
 from ocr.preprocessing import preprocessing_handler
-from translation.translation import translateGoogle, PonsTranslator
+from translation.translation import translateGoogle, DeeplTranslator
 from ocr.img_rec import get_text_from_image_tess
 
 
 
 
-def main():
+def start() -> str:
     capture()
     preprocessing_handler("screenshot.png")
     text: str = get_text_from_image_tess()
-    print(PonsTranslator(text))
-
-
-if __name__ == "__main__":
-    main()
+    return translateGoogle(text)
+    
