@@ -4,7 +4,9 @@ from translation.translation import translateGoogle, DeeplTranslator
 from ocr.img_rec import get_text_from_image_tess
 
 
-
+def test_image_quality() -> None:
+    capture()
+    preprocessing_handler("screenshot.png")
 
 def start() -> str:
     capture()

@@ -1,4 +1,4 @@
-from main import start
+from main import start, test_image_quality
 
 import tkinter as tk
 from tkinter import Label
@@ -84,7 +84,7 @@ class TranslationToolGUI:
         test_button.pack(pady=10)
 
     def _test(self):
-        start()
+        test_image_quality()
         img_window = tk.Toplevel(self.window)
         img_window.title("Screenshot Preview")
         img_window.geometry("320x240")
