@@ -5,6 +5,7 @@ from ocr.img_rec import get_text_from_image_tess
 
 
 
+
 def main():
     capture()
     preprocessing_handler("screenshot.png")

@@ -7,7 +7,7 @@
 </head>
 <body>
     <h1>Translation Tool</h1>
-    <form action="">
+    <form method="get">
         <input type="checkbox" name="preproccessing" id="preproccessing">
         <label for="preproccessing">Preprocessing</label><br>
         <label for="translators">Choose a Translator:</label>
@@ -16,9 +16,11 @@
             <option value="Mymemory">Mymemory</option>
             <option value="DeepL">DeepL</option>
             <option value="Yandex">Yandex</option>
-        </select> 
+        </select>
+        <button type="submit">submit</button>
+        <button type="submit">reset</button>
     </form>
-    <form action="">
+    <form method="get">
         <input type="checkbox" name="grayscale" id="grayscale">
         <label for="grayscale">grayscale</label><br>
         <input type="checkbox" name="binarize" id="binarize">
@@ -45,8 +47,10 @@
         <label for="crop_value">crop value</label><br>
         <input type="checkbox" name="border" id="border">
         <label for="border">border</label><br>
-        <input type="number" name="broder_value" id="border_value">
-        <label for="border_value">border value</label><br>
+        <input type="number" name="boder_size" id="boder_size">
+        <label for="boder_size">boder size</label><br>
+        <button type="submit">Save</button>
+        <button type="reset">Reset</button>
     </form>
 </body>
 </html>
