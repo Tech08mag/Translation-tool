@@ -25,7 +25,7 @@ class TranslationToolGUI:
     def _init_window(self):
         self.window.configure(bg="lightblue")
         self.window.title("Translation Tool")
-        self.window.geometry("400x500")
+        self.window.geometry("400x700")
         self.window.iconphoto(False, tk.PhotoImage(file="data/speichern_vergessen.png"))
 
         self.window.bind("<Control-Shift-Escape>", lambda e: self.window.quit())
@@ -44,7 +44,7 @@ class TranslationToolGUI:
 
     def _create_setting_row(self, row, key, value):
         label = tk.Label(self.settings_frame, text=f"{key}:", bg="blue", fg="orange")
-        label.grid(row=row, column=0, sticky="w", pady=5)
+        label.grid(row=row, column=0, sticky="w", pady=2)
 
         if isinstance(value, bool):
             var = tk.BooleanVar(value=value)
@@ -53,14 +53,14 @@ class TranslationToolGUI:
             var = tk.StringVar(value=str(value))
             entry = tk.Entry(self.settings_frame, textvariable=var)
 
-        entry.grid(row=row, column=1, sticky="ew", pady=5)
+        entry.grid(row=row, column=1, sticky="ew", pady=2)
         self.settings_entries[key] = var
 
     def _create_save_button(self):
         save_button = tk.Button(
             self.window, text="Save Settings", command=self._save_settings
         )
-        save_button.pack(pady=10)
+        save_button.pack(pady=5, side=tk.LEFT)
 
     def _save_settings(self):
         new_settings = {key: var.get() for key, var in self.settings_entries.items()}
@@ -69,7 +69,7 @@ class TranslationToolGUI:
 
     def _create_start_button(self):
         start_button = tk.Button(self.window, text="Start", command=self._start)
-        start_button.pack(pady=10)
+        start_button.pack(pady=5,side=tk.LEFT)
 
     def _start(self):
         text_window = tk.Toplevel(self.window)
@@ -79,11 +79,11 @@ class TranslationToolGUI:
         text_window.grid_columnconfigure(0, weight=1)
         text: str = start()
         text_label = tk.Label(text_window, text=text)
-        text_label.pack(padx=10, pady=10)
+        text_label.pack(pady=5,side=tk.LEFT)
 
     def create_test_button(self):
         test_button = tk.Button(self.window, text="Test", command=self._test)
-        test_button.pack(pady=10)
+        test_button.pack(pady=5, side=tk.LEFT)
 
     def _test(self):
         test_image_quality()

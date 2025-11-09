@@ -17,7 +17,7 @@
     "border": "",
     "border_size": "0",
     "content_lang": "eng",
-    "source_lang_google": "",
+    "source_lang_google": "english",
     "target_lang_google": "german",
     "deepl_api_token": "",
     "use_free_api": true,
