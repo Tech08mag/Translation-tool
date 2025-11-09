@@ -77,8 +77,6 @@ class TranslationToolGUI:
         text_label = tk.Label(text_window, text=text)
         text_label.pack(padx=10, pady=10)
 
-            
-
     def create_test_button(self):
         test_button = tk.Button(self.window, text="Test", command=self._test)
         test_button.pack(pady=10)
@@ -96,7 +94,6 @@ class TranslationToolGUI:
         panel = Label(img_window, image=img)
         panel.image = img
         panel.pack(expand=True, padx=10, pady=10)
-
 
     def run(self):
         self.window.mainloop()
