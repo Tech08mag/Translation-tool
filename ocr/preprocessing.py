@@ -135,14 +135,14 @@ def preprocessing_handler(img: str):
                     imgCV = grayscale(imgCV)
                     save(imgCV, "screenshot.png")
                 case "brightness":
-                    brightness_value = read_json("settings.json", "brightness_value")
+                    brightness_value = float(read_json("settings.json", "brightness_value"))
                     imgCV = brightness(imgCV, brightness_value)
                     save(imgCV, "screenshot.png")
                 case "binarize":
                     imgCV = binarize(imgCV)
                     save(imgCV, "screenshot.png")
                 case "contrast":
-                    contrast_value = read_json("settings.json", "contrast_value")
+                    contrast_value = float(read_json("settings.json", "contrast_value"))
                     imgCV = contrast(imgCV, contrast_value)
                     save(imgCV, "screenshot.png")
                 case "invert":

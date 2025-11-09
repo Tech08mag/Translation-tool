@@ -13,7 +13,6 @@ class TranslationToolGUI:
         self.settings_entries = {}
         self._init_window()
         self._create_settings_frame()
-        self._test()
         self._create_save_button()
         self.create_test_button()
         self._create_start_button()
