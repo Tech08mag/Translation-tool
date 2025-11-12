@@ -25,6 +25,7 @@
 - [ ] add [Libre Translate](https://github.com/LibreTranslate/LibreTranslate) integration
 - [ ] add [EasyNMT](https://github.com/UKPLab/EasyNMT)
 - [ ] add [paddleOCR](https://github.com/PaddlePaddle/PaddleOCR) as an pytesseract alternative
+- [ ] add [OllamaOCR](https://github.com/imanoop7/Ollama-OCR?tab=readme-ov-file)
 
 
 ## Features

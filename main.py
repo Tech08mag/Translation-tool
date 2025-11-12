@@ -13,4 +13,3 @@ def start() -> str:
     preprocessing_handler("screenshot.png")
     text: str = get_text_from_image_tess()
     return translateGoogle(text)
-    
