@@ -1,6 +1,5 @@
 import json
 
-
 def read_json(file: str, key: str):
     with open(file, mode="r", encoding="utf-8") as read_file:
         settings_data = json.load(read_file)

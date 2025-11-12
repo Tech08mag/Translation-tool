@@ -4,8 +4,7 @@ from mss import mss
 import mss.tools
 
 
-def capture():
-    
+def capture(): 
     with mss.mss() as sct:
         monitor_number = int(read_json("settings.json", "monitor_number"))
         monitor = sct.monitors[monitor_number]
